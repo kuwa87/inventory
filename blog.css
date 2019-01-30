@@ -1,0 +1,249 @@
+html { font-size: 62.5%; } 
+body { font-size: 1.6rem; } 
+p  { font-size: 1.6rem; } 
+li { font-size: 1.6rem; } 
+li p { font-size: 1.6rem; } 
+.form-control{ height: 4rem;}
+.btn{ font-size: 1.6rem; padding: 10px;}
+h1{ font-size: 2.6rem}
+i{ padding-right: 5px;}
+.form-control{ font-size: 1.6rem;}
+.form-check{ padding-left: 2.25rem;margin-bottom: 20px;}
+.form-check-input{ margin-left: -2.25rem;}
+textarea{ width: 100%;}
+.bg-green-original{ background: #28a745;}
+.bg-orange-original{ background: #ffc107;}
+
+/* login */
+nav.navbar{
+    padding: 1.2rem 2rem;
+}
+.navbar-brand{
+    font-size: 2.6rem;
+    font-family: 'Permanent Marker', cursive;
+}
+.navbar-brand:hover{
+    opacity: .8;
+    text-decoration: none;
+}
+
+.navbar-brand i{
+    margin-right: 10px;
+}
+.jumbotron {
+    padding: 1.2rem 2rem;
+    color: #fff;
+}
+.jumbotron i{
+    color: #fff;
+    padding-right: 10px;
+}
+h1{
+    font-size: 2.6rem;
+}
+.top-area{
+    min-height: 50px;
+    height: auto;
+    padding: 20px;
+}
+.top-area .btn-area{
+    margin: 0 20px;
+}
+.top-area .btn{
+    border: 1px solid #999;
+    padding: 6px;
+    width: 100%;
+}
+.top-area .btn:hover{
+    color: #fff;
+    background-color: #999;
+}
+.common-wrap{
+    /* text-align: center; */
+    padding: 20px 20px 40px;
+}
+.login-area{
+    width: 100%;
+    max-width: 360px;
+    /* display: inline-block; */
+    text-align: left;
+    margin: 40px auto;
+}
+.login-area h2{
+    text-align: center;
+    padding: 16px 10px;
+    border-bottom: 1px solid #999;
+    font-size: 22px;
+    font-weight: normal;
+}
+input,textarea{
+    margin: 10px auto 20px;
+}
+/* input:last-of-type,
+textarea:last-of-type{
+        margin-bottom: 40px;
+} */
+.form-group{
+    padding: 10px;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+}
+
+/* common */
+.dropdown-menu{
+    left: 14px;
+}
+.dropdown-item{
+    width: 150px;
+    padding: 10px 20px 10px;
+    font-size: 1.6rem;
+}
+.dropdown-item i{
+    margin-right: 5px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 0 16px;
+}
+.common-area{
+    width: 100%;
+    max-width: 1200px;
+    display: inline-block;
+    text-align: left;
+    margin: 40px auto;
+}
+
+.dropdown-menu{
+    font-size: 1.6rem;
+}
+.common-wrap h2{
+    padding: 16px 10px;
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #ddd;
+}
+.table-wrap{
+    width: 100%;
+    overflow-x: scroll;
+}
+.table thead th{
+    vertical-align: top;
+}
+/* posts */
+table td .btn{
+    border: 1px solid #ddd;
+    padding: 2px 12px;
+}
+table td .btn:hover{
+    color: #fff;
+    background-color: gray;
+}
+/* profile */
+
+
+.btn.btn-red{
+    background-color: #dc3545;
+    color: #fff;
+    border: 1px solid #dc3545;
+}
+.btn.btn-red:hover{
+    background-color: #fff;
+    color: #dc3545;
+}
+.btn.btn-green{
+    background-color: #28a745;
+    color: #fff;
+    border: 1px solid #28a745;
+}
+.btn.btn-green:hover{
+    background-color: #fff;
+    color: #28a745;
+}
+.btn.btn-blue{
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+}
+.btn.btn-blue:hover{
+    background-color: #fff;
+    color: #007bff;
+}
+.btn.btn-orange{
+    background-color: #ffc107;
+    color: #fff;
+    border: 1px solid #ffc107;
+}
+.btn.btn-orange:hover{
+    background-color: #fff;
+    color: #ffc107;
+}
+.mr-20px{
+    margin-right: 20px;
+}
+.form-label{
+    font-size: 1.8rem;
+}
+
+/* Dashboard */
+
+.boxes{
+    /* height: 200px; */
+    color: #fff;
+    background-color: #007bff;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;  
+}
+.box-title{
+    font-size: 2.4rem;
+    height: 2.8rem;
+}
+.boxes .numbers{
+    font-size: 3.6rem;
+}
+.boxes .numbers i{
+    font-size: 3.2rem;
+    margin-right: 4px;
+}
+.boxes .btn{
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 4px 10px;
+}
+.boxes .btn:hover{
+    background-color: #fff;
+    color: #007bff;
+}
+.boxes.green-box{
+    background-color: #28a745;
+}
+.boxes.green-box .btn:hover{
+    color: #28a745;
+}
+.boxes.orange-box{
+    background-color: #ffc107;
+}
+.boxes.orange-box .btn:hover{
+    color: #ffc107;
+}
+/* Postone */
+h2 span{
+    display: inline-block;
+    float: right;
+    font-size: 1.6rem;
+}
+.post-content{
+    padding: 30px 0 40px;
+}
+
+.update-area{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    
+}
