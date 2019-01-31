@@ -1,6 +1,3 @@
-<?php
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,43 +27,25 @@
                 <h2 class="bg-light">Login</h2>
                 <div class="form-group">
                 <form action="" method="post">
-                Email<br>
-                <input type="text" name="email" class="form-control" required>
+                Username<br>
+                <input type="text" name="username" class="form-control" required>
                 Password<br>
                 <input type="text" name="password" class="form-control" required>
-                <button class="btn btn-primary btn-block" name="login">Login</button>
-                </form><br>
+                <input type="submit" name="login" class="btn btn-primary btn-block" value="Login">
+                </form>
+                <?php
+                if(isset($_POST['login'])){
+                    $username = $_POST['username'];
+                    $password = $_POST['password'];
+                    $users = new User;
+                    $result = $users->login($username,$password);
+                }
+                    ?>
+                <br>
                 <a href="register.php">Not yet Registered?</a>
                 </div>
-            </div>
         </div>
-        <div class="php-box">
-        <?php
-if(isset($_POST['login'])){
-    include 'connection.php';
-
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM login WHERE email = '$email' and password = '$password'";
-    $result = $conn->query($sql);
-
-    if($result->num_rows > 0){
-        $row = $result->fetch_assoc();
-        $_SESSION['loginid'] = $row['loginID'];
-        header("Location: dashboard.php");
-    } else{
-        echo 'Username and Password error.';
-    }
-
-}
-
-?>
-        
         </div>
-<?php
-include 'footer.php';
-?>
     </div>
 </body>
 </html>

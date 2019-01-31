@@ -1,10 +1,8 @@
-<?php
-    session_start();
-    ob_start();
-    include 'connection.php';
-?>
+ <?php
+ include 'User.php'; 
+ ?>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a href="dashboard.php" class="navbar-brand text-white"><i class="fas fa-smile"></i>BLOG</a>
+            <a href="dashboard.php" class="navbar-brand text-white"><i class="fas fa-smile"></i>Inventory</a>
             <!-- button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" 
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
@@ -31,17 +29,11 @@
                                 <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>Welcome
                                 <?php
-                                $loginid = $_SESSION['loginid'];
-                                $sql = "SELECT * FROM user WHERE loginID = '$loginid'";
-                                $result = $conn->query($sql);
-                                    if ($result->num_rows > 0) {
-                                        $row = $result->fetch_assoc();
-                                        $name = $row['name'];
-                                        echo $name;
-                                    } else{
-                                        echo 'error' .$conn->error;
-                                    }
-
+                                session_start();
+                                $user_id = $_SESSION['user_id'];
+                                $user = new User;
+                                $row = $user->echo_users($user_id);
+                                echo $row['username'];
                         
                                 ?>
                                 
