@@ -1,3 +1,9 @@
+ <?php
+    include_once 'User.php';
+    // $user_id = $_SESSION['user_id'];
+    $users = new User;
+    $users->logged_in();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +43,7 @@
                 if(isset($_POST['login'])){
                     $username = $_POST['username'];
                     $password = $_POST['password'];
-                    $users = new User;
+                    // $users = new User;
                     $result = $users->login($username,$password);
                 }
                     ?>

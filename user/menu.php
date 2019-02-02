@@ -1,5 +1,5 @@
  <?php
-    include_once 'User.php';
+    include_once '../User.php';
     // $user_id = $_SESSION['user_id'];
     $user = new User;
     $user->login_required();
@@ -16,19 +16,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a href="dashboard.php" class="nav-link">Dashboard</a>
+                                <a href="index.php" class="nav-link">Items</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="items.php" class="nav-link">Items</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="categories.php" class="nav-link">Categories</a>
-                            </li>
-                                                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category Select</a>
                                     <div class="dropdown-menu" area-labelledby="navbarDropdown">
                                         <?php
-                                        include_once 'Category.php';
+                                        include_once '../Category.php';
                                         $category = new Category;
                                         $result = $category->get_category();
                                         foreach($result as $row){

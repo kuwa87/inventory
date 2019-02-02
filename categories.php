@@ -13,53 +13,44 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="blog.css">
 </head>
-<body class="users">
+<body class="categories">
     <div class="container-fluid p-0">
                 <?php
     include 'menu.php';
         ?>
         <div class="jumbotron bg-orange-original rounded-0 mb-0">
-            <h1><i class="fas fa-users"></i>Dashboard</h1>
+            <h1><i class="fas fa-users"></i>Categories</h1>
         </div>
         <div class="bg-light top-area"></div>
         <div class="common-wrap">
-                <h2 class="bg-light common-h2">Latest Users</h2>
+                <h2 class="bg-light common-h2">Categories</h2>
          <div class="table-wrap pt-5 pb-5">
                  <table class="table">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>username</th>
-                    <th>email</th>
-                    <!-- <th>password</th> -->
-                    <th>firstname</th>
-                    <th>lastname</th>
-                    <th>permission</th>
+                    <th>Category ID</th>
+                    <th>Categroy Name</th>
                     <th>action</th>
                 </tr>
             </thead>
             <tbody>
 <?php
-                    $users = new User;
-                    $result = $users->get_users();
+                    include_once 'Category.php';
+                    $categories = new Category;
+                    $result = $categories->get_category();
 
                     // print_r($result);
                     // var_dump($result);
 
                     if ($result) {
                         foreach ($result as $row) {
-                            $user_id = $row['user_id'];
+                            $category_id = $row['category_id'];
 
                             echo "<tr>";
-                            echo "<td>".$row['user_id']."</td>";
-                            echo "<td>".$row['username']."</td>";
-                            echo "<td>".$row['email']."</td>";
-                            // echo "<td>".$row['password']."</td>";
-                            echo "<td>".$row['firstname']."</td>";
-                            echo "<td>".$row['lastname']."</td>";
-                            echo "<td>".$row['permission']."</td>";
+                            echo "<td>".$row['category_id']."</td>";
+                            echo "<td>".$row['category_name']."</td>";
                             echo "<td><form></form>
-                            <a href='edituser.php?user_id=$user_id&action=1' class='btn btn-sm btn-success'>Edit</a> <a href='deleteuser.php?user_id=$user_id&action=3' class='btn btn-sm btn-danger text-white'>Delete</a></td>";
+                            <a href='editcategory.php?category_id=$category_id&action=1' class='btn btn-sm btn-success'>Edit</a> <a href='deletecategory.php?category_id=$category_id&action=3' class='btn btn-sm btn-danger text-white'>Delete</a></td>";
                             echo "</tr>";
                         }
                     }
@@ -67,7 +58,7 @@
 ?>
             </tbody>
         </table>
-        <a href="createuser.php" class="btn btn-primary">Add User</a>
+        <a href="createcategory.php" class="btn btn-primary">Add Category</a>
         </div>  
         </div>
     </div>
